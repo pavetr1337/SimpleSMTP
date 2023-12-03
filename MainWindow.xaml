@@ -1,0 +1,53 @@
+﻿<Window x:Class="SimpleSMTP.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SimpleSMTP"
+        Name ="window"
+        mc:Ignorable="d" AllowsTransparency="True" Background="Transparent" WindowStyle="None"  
+        Title="Simple SMTP" Height="450" Width="800" ResizeMode="NoResize" MouseDown="Window_MouseDown">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="MainStyle.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Border CornerRadius="25" BorderBrush="Transparent" BorderThickness="2" Padding="6" Background="GhostWhite">
+        <Grid>
+            <Grid VerticalAlignment="Top" Height="30" HorizontalAlignment="Right" Width="230" Margin="0,5,5,0" >
+                <Button Content="X"  Width="25" Margin="195,0,10,0" Click="Close_Click"/>
+                <Button Content="-" Width="25"  Margin="165,0,40,0" Click="Minimize_Click"/>
+            </Grid>
+            <Label Content="E-Mail Address" HorizontalAlignment="Left" Margin="15,10,0,0" VerticalAlignment="Top" FontSize="20"/>
+            <TextBox Name="sender_email" HorizontalAlignment="Left" Margin="15,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="142"/>
+            <Label Content="App Password" HorizontalAlignment="Left" Margin="208,10,0,0" VerticalAlignment="Top" FontSize="20"/>
+            <PasswordBox Name="sender_pass" HorizontalAlignment="Left" Margin="208,50,0,0" VerticalAlignment="Top" Width="154"/>
+            <Button Name="login" Content="Login" HorizontalAlignment="Left" Margin="414,74,0,0" VerticalAlignment="Top" Height="22" Width="142" Click="login_Click"/>
+            <Label Content="Reciever E-Mail" HorizontalAlignment="Left" Margin="15,90,0,0" VerticalAlignment="Top" FontSize="20"/>
+            <TextBox x:Name="recipient_email" HorizontalAlignment="Left" Margin="15,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" TextChanged="changeRecieverMail"/>
+            <Label Content="Mail Subject" HorizontalAlignment="Left" Margin="208,90,0,0" VerticalAlignment="Top" FontSize="20"/>
+            <TextBox x:Name="mail_subject" HorizontalAlignment="Left" Margin="208,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154" TextChanged="changeSubject"/>
+            <Label Content="Mail Text" HorizontalAlignment="Left" Margin="15,175,0,0" VerticalAlignment="Top" FontSize="20"/>
+            <RichTextBox x:Name="mail_text" HorizontalAlignment="Left" Margin="15,217,0,0" VerticalAlignment="Top" Width="347" Height="108" TextChanged="change_text_preview">
+                <RichTextBox.Resources>
+                    <Style TargetType="{x:Type Paragraph}">
+                        <Setter Property="Margin" Value="0"/>
+                    </Style>
+                </RichTextBox.Resources>
+            </RichTextBox>
+            <Button Name="send_mail" Content="Send" HorizontalAlignment="Left" Margin="15,341,0,0" VerticalAlignment="Top" Height="22" Width="103" Click="send_mail_Click"/>
+            <Label Content="SMTP Server" HorizontalAlignment="Left" Margin="414,10,0,0" VerticalAlignment="Top" FontSize="20"/>
+            <TextBox x:Name="smtp_server" HorizontalAlignment="Right" Text="smtp.mail.ru"  Margin="0,50,228,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="142"/>
+            <CheckBox Name="useSSL" Content="SSL Encrypt" HorizontalAlignment="Left" Margin="143,344,0,0" VerticalAlignment="Top" Width="142"/>
+            <Button Name ="smtp_list" Content="SMTP List" HorizontalAlignment="Left" Margin="571,50,0,0" VerticalAlignment="Top" Width="93" Height="18" Click="smtp_list_Click"/>
+            <Label Name="preview_sender" Content="From: unknown@mail.ru" HorizontalAlignment="Left" Margin="414,119,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16"/>
+            <Label x:Name="preview_subject" Content="Subject: Unknown" HorizontalAlignment="Left" Margin="414,191,0,0" VerticalAlignment="Top" FontSize="14"/>
+            <Label x:Name="preview_reciever" Content="To: unknown@mail.ru" HorizontalAlignment="Left" Margin="414,155,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16"/>
+            <TextBlock TextWrapping="WrapWithOverflow" x:Name="preview_mailtext" HorizontalAlignment="Left" Margin="414,225,0,0" VerticalAlignment="Top" Width="319" Height="174">
+                This is the text of mail
+            </TextBlock>
+        </Grid>
+    </Border>
+</Window>

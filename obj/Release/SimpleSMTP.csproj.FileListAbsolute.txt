@@ -1,0 +1,17 @@
+G:\Projects\SimpleSMTP\bin\Release\SimpleSMTP.exe.config
+G:\Projects\SimpleSMTP\bin\Release\SimpleSMTP.exe
+G:\Projects\SimpleSMTP\bin\Release\SimpleSMTP.pdb
+G:\Projects\SimpleSMTP\obj\Release\SimpleSMTP.csproj.AssemblyReference.cache
+G:\Projects\SimpleSMTP\obj\Release\SimpleSMTP.csproj.SuggestedBindingRedirects.cache
+G:\Projects\SimpleSMTP\obj\Release\MainStyle.baml
+G:\Projects\SimpleSMTP\obj\Release\MainWindow.g.cs
+G:\Projects\SimpleSMTP\obj\Release\App.g.cs
+G:\Projects\SimpleSMTP\obj\Release\SimpleSMTP_MarkupCompile.cache
+G:\Projects\SimpleSMTP\obj\Release\SimpleSMTP_MarkupCompile.lref
+G:\Projects\SimpleSMTP\obj\Release\MainWindow.baml
+G:\Projects\SimpleSMTP\obj\Release\SimpleSMTP.g.resources
+G:\Projects\SimpleSMTP\obj\Release\SimpleSMTP.Properties.Resources.resources
+G:\Projects\SimpleSMTP\obj\Release\SimpleSMTP.csproj.GenerateResource.cache
+G:\Projects\SimpleSMTP\obj\Release\SimpleSMTP.csproj.CoreCompileInputs.cache
+G:\Projects\SimpleSMTP\obj\Release\SimpleSMTP.exe
+G:\Projects\SimpleSMTP\obj\Release\SimpleSMTP.pdb
